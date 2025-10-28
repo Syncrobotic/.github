@@ -1,0 +1,28 @@
+name: General Issue
+description: 提出一般性問題或討論
+title: "[Issue] "
+labels: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 描述
+      description: 清楚描述你的問題或想討論的主題
+    validations:
+      required: true
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: 相關背景
+      description: 提供相關的背景資訊或情境
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他補充
+      description: 其他相關資訊、截圖、連結等
+    validations:
+      required: false
