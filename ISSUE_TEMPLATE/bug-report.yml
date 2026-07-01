@@ -1,80 +1,94 @@
-name: Bug Report
-description: 回報一個錯誤或問題
-title: "[Bug] "
+name: 🐛 Bug Report
+description: Report a bug or something that isn't working as expected.
+title: "[Bug] <what's broken>"
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        感謝你花時間填寫這個錯誤回報！
-  
+        Thanks for taking the time to file a bug report.
   - type: checkboxes
     attributes:
-      label: 確認事項
-      description: 請確認以下事項
+      label: Pre-flight
       options:
-        - label: 我已搜尋過現有的 Issues，確認沒有重複的問題
+        - label: I searched existing issues and this is not a duplicate.
           required: true
-        - label: 我已閱讀過相關文件
+        - label: I have read the relevant documentation.
           required: true
-  
   - type: textarea
     id: description
     attributes:
-      label: 問題描述
-      description: 清楚簡潔地描述這個錯誤
-      placeholder: 告訴我們發生了什麼問題
+      label: What happened
+      description: A clear and concise description of the bug and the actual behavior.
+      placeholder: Tell us what went wrong.
     validations:
       required: true
-  
-  - type: textarea
-    id: reproduction
-    attributes:
-      label: 重現步驟
-      description: 如何重現這個問題
-      placeholder: |
-        1. 前往 '...'
-        2. 點擊 '....'
-        3. 捲動到 '....'
-        4. 看到錯誤
-    validations:
-      required: true
-  
   - type: textarea
     id: expected
     attributes:
-      label: 預期行為
-      description: 描述你預期應該發生什麼
+      label: Expected behavior
+      description: What did you expect to happen instead?
     validations:
       required: true
-  
   - type: textarea
-    id: actual
+    id: reproduction
     attributes:
-      label: 實際行為
-      description: 描述實際發生了什麼
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll to '...'
+        4. See the error
     validations:
       required: true
-  
-  - type: textarea
+  - type: input
     id: environment
     attributes:
-      label: 環境資訊
-      description: 請提供相關的環境資訊
-      value: |
-        - OS: [例如 Windows 11, macOS 14, Ubuntu 22.04]
-        - 瀏覽器: [例如 Chrome 120, Firefox 121]
-        - 版本: [例如 v1.2.3]
-      render: markdown
+      label: Environment
+      description: Branch/commit, browser/OS, and deployment tier.
+      placeholder: "dev @ 0de27aa3, Chrome 141, macOS 14, local"
     validations:
-      required: false
-  
-  - type: textarea
-    id: additional
+      required: true
+  - type: dropdown
+    id: severity
     attributes:
-      label: 其他補充
+      label: Severity
+      options:
+        - S0 — outage / data loss
+        - S1 — major feature broken, no workaround
+        - S2 — feature broken, workaround exists
+        - S3 — minor / cosmetic
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - api
+        - auth
+        - config
+        - ci
+        - database
+        - data-layer
+        - deployment
+        - docs
+        - i18n
+        - infra
+        - security
+        - tooling
+        - ui
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
       description: |
-        其他相關資訊、截圖、日誌等
-        提示：可以直接拖曳圖片到此區域
+        Relevant logs, request IDs, or screenshots. Redact secrets.
+        Tip: you can drag & drop images here.
+      render: shell
     validations:
       required: false

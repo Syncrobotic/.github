@@ -1,28 +1,26 @@
-name: General Issue
-description: 提出一般性問題或討論
+name: 📌 General Issue
+description: Anything that doesn't fit Task, Bug, or Feature.
 title: "[Issue] "
 labels: []
 body:
   - type: textarea
     id: description
     attributes:
-      label: 描述
-      description: 清楚描述你的問題或想討論的主題
+      label: Description
+      description: Clearly describe the issue or topic.
     validations:
       required: true
-  
   - type: textarea
     id: context
     attributes:
-      label: 相關背景
-      description: 提供相關的背景資訊或情境
+      label: Context
+      description: Relevant background or situation.
     validations:
       required: false
-  
   - type: textarea
     id: additional
     attributes:
-      label: 其他補充
-      description: 其他相關資訊、截圖、連結等
+      label: Additional notes
+      description: Any other information, screenshots, or links.
     validations:
       required: false

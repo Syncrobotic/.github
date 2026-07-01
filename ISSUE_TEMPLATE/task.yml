@@ -1,0 +1,105 @@
+name: 🛠️ Task / Enhancement
+description: A scoped engineering task, refactor, or enhancement (the default for planned work).
+title: "[Area] <concise imperative summary>"
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep the title short and imperative (e.g. "Consolidate the API response envelope").
+        Fill every required section — tasks without acceptance criteria will be sent back.
+  - type: checkboxes
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One sentence — what and why.
+      placeholder: Merge the two response DTOs into a single ApiResponseDto<T> to match the reference repo.
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: Background / Why
+      description: The problem, motivation, and any alignment source (link the reference repo/file).
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current state
+      description: How it works today (name the files/config involved).
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: The target end state. Be specific.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Checkbox list. Each item must be objectively verifiable.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: Subtasks
+      description: Optional breakdown of the work.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: false
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk / Notes
+      description: Breaking changes, cross-repo dependencies, migration/rollout concerns.
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 — must do
+        - P1 — should do
+        - P2 — nice to have
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - api
+        - auth
+        - config
+        - ci
+        - database
+        - data-layer
+        - deployment
+        - docs
+        - i18n
+        - infra
+        - security
+        - tooling
+        - ui
+        - other
+    validations:
+      required: true
