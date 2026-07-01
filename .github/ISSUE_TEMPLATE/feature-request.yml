@@ -6,17 +6,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for the suggestion! For a scoped engineering task, use the Task / Enhancement template instead.
+        ### ✨ Great ideas welcome
+        For a scoped engineering task, use **🛠️ Task / Enhancement** instead. This one is for the *what* and *why*.
   - type: checkboxes
     attributes:
       label: Pre-flight
       options:
-        - label: I searched existing issues and this is not a duplicate.
+        - label: I searched existing issues and this isn't a duplicate.
+          required: true
+        - label: I agree to follow this project's Code of Conduct.
           required: true
   - type: textarea
     id: problem
     attributes:
-      label: Problem / motivation
+      label: 💡 Problem / motivation
       description: What user or system need is unmet today?
       placeholder: I want to be able to...
     validations:
@@ -24,20 +27,20 @@ body:
   - type: textarea
     id: solution
     attributes:
-      label: Proposed solution
+      label: 🛠️ Proposed solution
       description: Describe the capability or implementation you have in mind.
     validations:
       required: true
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternatives considered
+      label: 🔀 Alternatives considered
     validations:
       required: false
   - type: textarea
     id: acceptance
     attributes:
-      label: Acceptance criteria
+      label: ✅ Acceptance criteria
       description: How do we know it's done?
       value: |
         - [ ]
@@ -47,7 +50,7 @@ body:
   - type: dropdown
     id: priority
     attributes:
-      label: Priority
+      label: 🚦 Priority
       options:
         - P0 — must do
         - P1 — should do

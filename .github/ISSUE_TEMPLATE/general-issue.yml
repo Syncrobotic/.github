@@ -3,24 +3,35 @@ description: Anything that doesn't fit Task, Bug, or Feature.
 title: "[Issue] "
 labels: []
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 📌 Something else on your mind?
+        For how-to questions, try the [Knowledge Base](https://syncrobotic.atlassian.net/wiki/home) first.
+  - type: checkboxes
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched existing issues and this isn't a duplicate.
+          required: true
   - type: textarea
     id: description
     attributes:
-      label: Description
+      label: 📝 Description
       description: Clearly describe the issue or topic.
     validations:
       required: true
   - type: textarea
     id: context
     attributes:
-      label: Context
+      label: 🧭 Context
       description: Relevant background or situation.
     validations:
       required: false
   - type: textarea
     id: additional
     attributes:
-      label: Additional notes
+      label: ➕ Additional notes
       description: Any other information, screenshots, or links.
     validations:
       required: false

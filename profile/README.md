@@ -1,31 +1,42 @@
-# SyncRobotic AI
+<div align="center">
 
-Intelligent Robotics and Autonomous Decision-Making Platform
+# 🤖 SyncRobotic AI
 
-Welcome to SyncRobotic AI. We focus on intelligent and automated robotic systems, dedicated to building advanced robot platforms with autonomous decision-making capabilities, driving digital transformation and intelligent upgrades across industries.
+### Intelligent Robotics & Autonomous Decision-Making Platform
 
-Core Focus
+Robots that **sense, decide, and act on their own** — driving intelligent
+automation across industry, healthcare, and the physical world.
 
-- Quadruped Robot Technology and Automation Control
+📖 [Docs & Knowledge Base](https://syncrobotic.atlassian.net/wiki/home)
 
-  Providing quadruped robots with high-precision sensing and dynamic control capabilities to perform multi-task inspections on complex terrains, environmental monitoring, and material transportation, enhancing automation levels in industrial and medical fields.
+</div>
 
-- Autonomous MDP Decision-Making and Reinforcement Learning
+---
 
-  Utilizing Markov Decision Process and reinforcement learning algorithms, enabling robots to autonomously evaluate risks and benefits in uncertain environments and adjust strategies and actions in real time.
+## ⚡ What we build
 
-- hydraNet Distributed Multimodal AI Architecture
+Autonomous robots and the distributed AI that powers them: real-time perception,
+on-device reasoning, and multi-node collaboration that keeps working **at the
+edge** — without a constant round-trip to the cloud.
 
-  Integrating vision, speech, and motion information to achieve environmental understanding and intelligent collaboration, supporting natural language command parsing, multi-task processing, and multi-node collaborative decision-making.
+## 🎯 Focus areas
 
-- Edge Computing and Multi-Node Collaboration
+- **🐾 Quadruped Robotics & Control** — high-precision sensing and dynamic control for multi-task inspection on complex terrain: environmental monitoring, autonomous patrols, and material transport.
+- **🧠 Autonomous Decision-Making (MDP + RL)** — Markov Decision Process and reinforcement learning let robots weigh risk vs. reward in uncertain environments and adapt strategy in real time.
+- **🕸️ hydraNet — Distributed Multimodal AI** — fuses vision, speech, and motion into a shared understanding, with natural-language command parsing and multi-node collaborative decisions.
+- **🛰️ Edge Computing & Multi-Node Collaboration** — distributed, real-time processing across sites; less central-server dependence, faster response, higher resilience.
+- **🔍 Intelligent Inspection & Perception** — sensor- and AI-equipped robots auto-detect anomalies, patrol autonomously, and alert — cutting the manual inspection load.
+- **🏭 Multi-Scenario Deployment** — manufacturing, healthcare, smart warehousing, and campus security, with tailored solutions for smart factories and service robots.
 
-  Supporting distributed computing and real-time data processing across various sites, reducing dependence on central servers, accelerating response speed, and enhancing system resilience.
+## 📚 Resources
 
-- Intelligent Inspection and Environmental Perception
+| | |
+| --- | --- |
+| 📖 **Docs & Knowledge Base** | https://syncrobotic.atlassian.net/wiki/home |
+| 🧭 **Contributing** | [`CONTRIBUTING.md`](https://github.com/Syncrobotic/.github/blob/main/CONTRIBUTING.md) |
+| 🔒 **Security** | [`SECURITY.md`](https://github.com/Syncrobotic/.github/blob/main/SECURITY.md) |
+| 💬 **Support** | [`SUPPORT.md`](https://github.com/Syncrobotic/.github/blob/main/SUPPORT.md) |
 
-  Robots equipped with various sensors and AI models can automatically identify anomalies, conduct autonomous patrols, and send alerts, greatly reducing the burden of manual inspection.
-
-- Multi-Scenario Application Deployment
-
-  Deployed in diverse environments such as manufacturing, medical care, smart warehousing, and campus security, providing tailored solutions to promote smart factories and service robot development.
+<div align="center">
+<sub>© SyncRobotic — Intelligent Robotics & Autonomous Systems</sub>
+</div>

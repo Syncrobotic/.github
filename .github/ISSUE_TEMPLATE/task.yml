@@ -1,23 +1,24 @@
 name: 🛠️ Task / Enhancement
-description: A scoped engineering task, refactor, or enhancement (the default for planned work).
+description: A scoped engineering task, refactor, or enhancement — the default for planned work.
 title: "[Area] <concise imperative summary>"
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Keep the title short and imperative (e.g. "Consolidate the API response envelope").
-        Fill every required section — tasks without acceptance criteria will be sent back.
+        ### 🛠️ Let's scope this out
+        Keep the title short and imperative (e.g. *"Consolidate the API response envelope"*).
+        Every required field below is part of a good task — vague tasks get sent back. 🙂
   - type: checkboxes
     attributes:
       label: Pre-flight
       options:
-        - label: I searched existing issues and this is not a duplicate.
+        - label: I searched existing issues and this isn't a duplicate.
           required: true
   - type: input
     id: summary
     attributes:
-      label: Summary
+      label: 🎯 Summary
       description: One sentence — what and why.
       placeholder: Merge the two response DTOs into a single ApiResponseDto<T> to match the reference repo.
     validations:
@@ -25,28 +26,28 @@ body:
   - type: textarea
     id: background
     attributes:
-      label: Background / Why
-      description: The problem, motivation, and any alignment source (link the reference repo/file).
+      label: 💭 Background / Why
+      description: The problem, motivation, and any reference (link the source repo/file).
     validations:
       required: true
   - type: textarea
     id: current
     attributes:
-      label: Current state
-      description: How it works today (name the files/config involved).
+      label: 📍 Current state
+      description: How it works today. Name the files/config involved.
     validations:
       required: true
   - type: textarea
     id: goal
     attributes:
-      label: Goal
+      label: 🏁 Goal
       description: The target end state. Be specific.
     validations:
       required: true
   - type: textarea
     id: acceptance
     attributes:
-      label: Acceptance criteria
+      label: ✅ Acceptance criteria
       description: Checkbox list. Each item must be objectively verifiable.
       value: |
         - [ ]
@@ -57,7 +58,7 @@ body:
   - type: textarea
     id: subtasks
     attributes:
-      label: Subtasks
+      label: 🧩 Subtasks
       description: Optional breakdown of the work.
       value: |
         - [ ]
@@ -67,14 +68,14 @@ body:
   - type: textarea
     id: risk
     attributes:
-      label: Risk / Notes
+      label: ⚠️ Risk / Notes
       description: Breaking changes, cross-repo dependencies, migration/rollout concerns.
     validations:
       required: false
   - type: dropdown
     id: priority
     attributes:
-      label: Priority
+      label: 🚦 Priority
       options:
         - P0 — must do
         - P1 — should do
@@ -84,7 +85,7 @@ body:
   - type: dropdown
     id: area
     attributes:
-      label: Area
+      label: 🗂️ Area
       multiple: true
       options:
         - api
