@@ -6,19 +6,22 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to file a bug report.
+        ### 🐛 Thanks for the report
+        A clear repro is the fastest path to a fix. Fill in as much as you can. 🔧
   - type: checkboxes
     attributes:
       label: Pre-flight
       options:
-        - label: I searched existing issues and this is not a duplicate.
+        - label: I searched existing issues and this isn't a duplicate.
           required: true
-        - label: I have read the relevant documentation.
+        - label: I'm on the latest version of the affected branch/build.
+          required: true
+        - label: I agree to follow this project's Code of Conduct.
           required: true
   - type: textarea
     id: description
     attributes:
-      label: What happened
+      label: 🐞 What happened
       description: A clear and concise description of the bug and the actual behavior.
       placeholder: Tell us what went wrong.
     validations:
@@ -26,14 +29,14 @@ body:
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
+      label: 🎯 Expected behavior
       description: What did you expect to happen instead?
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Steps to reproduce
+      label: 🔁 Steps to reproduce
       placeholder: |
         1. Go to '...'
         2. Click on '...'
@@ -44,7 +47,7 @@ body:
   - type: input
     id: environment
     attributes:
-      label: Environment
+      label: 🖥️ Environment
       description: Branch/commit, browser/OS, and deployment tier.
       placeholder: "dev @ 0de27aa3, Chrome 141, macOS 14, local"
     validations:
@@ -52,7 +55,7 @@ body:
   - type: dropdown
     id: severity
     attributes:
-      label: Severity
+      label: 🌡️ Severity
       options:
         - S0 — outage / data loss
         - S1 — major feature broken, no workaround
@@ -63,7 +66,7 @@ body:
   - type: dropdown
     id: area
     attributes:
-      label: Area
+      label: 🗂️ Area
       multiple: true
       options:
         - api
@@ -85,10 +88,10 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Logs / screenshots
+      label: 📎 Logs / screenshots
       description: |
-        Relevant logs, request IDs, or screenshots. Redact secrets.
-        Tip: you can drag & drop images here.
+        Relevant logs, request IDs, or screenshots. **Redact secrets.**
+        Tip: drag & drop images here.
       render: shell
     validations:
       required: false
