@@ -1,68 +1,25 @@
-# 🧭 Contributing to SyncRobotic
+# Contributing
 
-Thanks for contributing! This guide covers the conventions shared across all
-SyncRobotic repositories. Individual repos may add stack-specific notes in their
-own `README.md` / `CLAUDE.md` — always check those for build & test commands.
+Team members: everything about how we work lives in the [engineering handbook](https://github.com/Syncrobotic/SyncAI-Docs-Handbook). It takes ten minutes to read. This page is the short version, and if the two ever disagree, the handbook wins.
 
-By participating, you agree to our [Code of Conduct](./CODE_OF_CONDUCT.md).
+## The short version
 
-## 🌿 Branching & promotion flow
+**Branch from `dev`, PR back into `dev`.** Name the branch `<type>/<short-slug>`, for example `feat/123-camera-preview`. Changes reach `stage` and `main` only through promotion PRs, which repo owners open. Never target `stage` or `main` with a feature.
 
-We promote changes through tiers:
+**Write commits and PR titles in English, as [Conventional Commits](https://www.conventionalcommits.org/).** `feat(api): add camera preview`, `fix(docker): run migrations in the server only`. They become the changelog. Descriptions and issue bodies can be in any language.
 
-```
-feat/*  or  refactor/*  →  dev  →  stage  →  main
-```
+**Squash or merge, your call. Promotions are never squashed.** Squash suits a small PR. If you merge, every commit lands on `dev`, so tidy them first. Promotions always use a merge commit, so `dev`, `stage` and `main` keep one shared history.
 
-- **Cut feature/refactor branches from the latest `dev`** (`git fetch` first —
-  local `dev` can be stale). Open your PR against `dev`.
-- **Never** branch from another feature branch, and **never** target
-  `stage` / `main` directly. Promotion to `stage` and `main` happens via PR from
-  the prior tier.
-- Branch names: `feat/<short-slug>`, `refactor/<short-slug>`, `fix/<short-slug>`.
+**One PR, one change.** Link the issue with `Closes #123`, or say why there isn't one. Keep it under about 400 lines. CI must be green and a code owner must approve. Nobody approves their own PR.
 
-## ✍️ Commit messages — Conventional Commits
+**Anything with a screen uses the [design system](https://design-system.syncrobotic.me).** Internal tools included.
 
-All commits follow [Conventional Commits](https://www.conventionalcommits.org/)
-and are validated by commitlint:
+**Secrets never go into git.** Use `.env` locally and keep a `.env.example` with names only.
 
-```
-feat(scope): add passkey sign-in
-fix(api): correct 201 status on camera preview
-chore(deps): bump lucide-react
-refactor(structure): move ambient types into common/
-```
+## Issues
 
-Common types: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, `ci`, `perf`.
-This drives automated, categorized release notes — so write them well.
+Pick a template. Write the title in English as `[Area] what should happen`. Give one deliverable and acceptance criteria someone can check. Repo owners triage weekly and set the priority label (`P0` to `P3`).
 
-## 🔀 Pull requests
+Product questions and how-to guides live in [Confluence](https://syncrobotic.atlassian.net/wiki/home). Security problems go through the [security policy](SECURITY.md), never a public issue.
 
-- **Link an issue.** Reference the issue your PR addresses with a closing
-  keyword (`Closes #123`). If a PR intentionally has no issue (chore / deps /
-  docs / hotfix), say so and why. The PR template has a section for this.
-- **Keep PRs small and focused** — one logical change per PR is easier to review
-  and revert.
-- **Green before review** — lint, typecheck, and tests should pass. Add or update
-  tests for behavior changes.
-- **Fill in the PR template** — summary, related issue, changes, checklist.
-- Use a Conventional-Commits-style PR title (it becomes the squash-merge commit).
-
-## 🐛 Reporting bugs & requesting features
-
-Open an issue and choose the right template:
-
-- **🐛 Bug Report** · **✨ Feature Request** · **🛠️ Task / Enhancement** · **📌 General Issue**
-
-For how-to questions, see the
-[Knowledge Base](https://syncrobotic.atlassian.net/wiki/home) instead.
-
-## 🔒 Security
-
-Never file security problems as public issues — follow the
-[Security Policy](./SECURITY.md).
-
----
-
-Questions about the process? Check the
-[Knowledge Base](https://syncrobotic.atlassian.net/wiki/home) or ask a maintainer.
+By taking part you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).

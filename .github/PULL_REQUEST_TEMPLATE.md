@@ -1,37 +1,29 @@
 <!--
-  Org-wide default PR template (Syncrobotic/.github).
-  Keep the title in Conventional Commits form, e.g. feat(scope): ...
+Title: English Conventional Commits, e.g. feat(api): add camera preview
+Base: dev (promotions and hotfixes excepted)
 -->
 
-## Summary
+## What and why
 
-<!-- What does this PR do, and why? 1–3 sentences. -->
+<!-- One to three sentences. What changes, and why now? -->
 
-## Related issue
-
-<!--
-  Link the issue this PR addresses. Use a closing keyword so it auto-closes on merge:
-  Closes #123  (also: Fixes #123 / Resolves #123)
-
-  If this PR intentionally has no issue (e.g. chore / dependency bump / docs / hotfix),
-  delete the line below and write "No issue — <reason>".
--->
+## Issue
 
 Closes #
 
-## Changes
+<!-- No issue? Replace the line above with: No issue, because ... -->
 
-<!-- Bullet the notable changes. -->
+## How to check it
 
--
-
-## Checklist
-
-- [ ] Linked a related issue above, or explained why this PR doesn't need one
-- [ ] CI is green (lint / typecheck / tests as applicable)
-- [ ] Added or updated tests where it makes sense
-- [ ] Updated docs / config / env examples if behavior changed
+<!-- What should the reviewer run, open or look at? Screenshots or a recording for anything visual. -->
 
 ## Notes
 
-<!-- Breaking changes, migration/rollout steps, screenshots, follow-ups. -->
+<!-- Breaking changes, migrations, rollout steps, follow-ups. Delete if empty. -->
+
+---
+
+- [ ] CI is green
+- [ ] Tests added or updated where behaviour changed
+- [ ] Docs, config and `.env.example` updated if needed
+- [ ] UI built with the design system (if this PR has any)

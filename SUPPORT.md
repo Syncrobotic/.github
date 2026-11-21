@@ -1,31 +1,11 @@
-# 💬 Support
+# Getting help
 
-Need help? Here's the fastest way to get it.
+| You want to… | Go here |
+| --- | --- |
+| Know how we work: branches, commits, reviews, releases | The [engineering handbook](https://github.com/Syncrobotic/SyncAI-Docs-Handbook) (team members) |
+| Understand a product, a spec or a how-to | [Confluence](https://syncrobotic.atlassian.net/wiki/home) |
+| Ask about one repository | The people in its `.github/CODEOWNERS` file |
+| Report a bug or propose a change | An issue in that repository, using a template |
+| Report a security problem | The [security policy](SECURITY.md). Never a public issue. |
 
-## 📖 Start with the Knowledge Base
-
-Most how-to questions, setup guides, and product docs live in our Confluence
-knowledge base:
-
-**➡️ https://syncrobotic.atlassian.net/wiki/home**
-
-Please check there first — it's the quickest path to an answer.
-
-## 🐛 Found a bug? ✨ Have an idea?
-
-Open an issue in the relevant repository and pick a template:
-
-- **🐛 Bug Report** — something isn't working as expected.
-- **✨ Feature Request** — propose a new capability.
-- **🛠️ Task / Enhancement** — a scoped engineering change.
-
-## 🔒 Security issues
-
-Do **not** use issues for security reports. Follow our
-[Security Policy](./SECURITY.md) to report privately.
-
-## ⏱️ Response expectations
-
-This is an actively developed platform maintained by the SyncRobotic team.
-We triage issues regularly, but response times may vary — the Knowledge Base is
-always the fastest option for common questions.
+Repo owners triage issues every week. Anything labelled `P0` gets a response the same day.

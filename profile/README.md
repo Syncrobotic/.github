@@ -1,42 +1,25 @@
-<div align="center">
+<img src="https://raw.githubusercontent.com/Syncrobotic/SyncAI-Lib-DesignSystem/main/public/brand/syncrobotic-mark.svg" alt="SYNCROBOTIC" width="56" />
 
-# 🤖 SyncRobotic AI
+# SYNCROBOTIC
 
-### Intelligent Robotics & Autonomous Decision-Making Platform
+**Robots that work in the real world, and the software that runs them.** We build quadruped robots that patrol and inspect sites on their own, on-premise video analytics that spot what needs a person, and the perception models behind both, small enough to run at the edge.
 
-Robots that **sense, decide, and act on their own** — driving intelligent
-automation across industry, healthcare, and the physical world.
+[Design system](https://design-system.syncrobotic.me) · [Security](https://github.com/Syncrobotic/.github/blob/main/SECURITY.md) · [Support](https://github.com/Syncrobotic/.github/blob/main/SUPPORT.md)
 
-📖 [Docs & Knowledge Base](https://syncrobotic.atlassian.net/wiki/home)
-
-</div>
-
----
-
-## ⚡ What we build
-
-Autonomous robots and the distributed AI that powers them: real-time perception,
-on-device reasoning, and multi-node collaboration that keeps working **at the
-edge** — without a constant round-trip to the cloud.
-
-## 🎯 Focus areas
-
-- **🐾 Quadruped Robotics & Control** — high-precision sensing and dynamic control for multi-task inspection on complex terrain: environmental monitoring, autonomous patrols, and material transport.
-- **🧠 Autonomous Decision-Making (MDP + RL)** — Markov Decision Process and reinforcement learning let robots weigh risk vs. reward in uncertain environments and adapt strategy in real time.
-- **🕸️ hydraNet — Distributed Multimodal AI** — fuses vision, speech, and motion into a shared understanding, with natural-language command parsing and multi-node collaborative decisions.
-- **🛰️ Edge Computing & Multi-Node Collaboration** — distributed, real-time processing across sites; less central-server dependence, faster response, higher resilience.
-- **🔍 Intelligent Inspection & Perception** — sensor- and AI-equipped robots auto-detect anomalies, patrol autonomously, and alert — cutting the manual inspection load.
-- **🏭 Multi-Scenario Deployment** — manufacturing, healthcare, smart warehousing, and campus security, with tailored solutions for smart factories and service robots.
-
-## 📚 Resources
+## What we build
 
 | | |
 | --- | --- |
-| 📖 **Docs & Knowledge Base** | https://syncrobotic.atlassian.net/wiki/home |
-| 🧭 **Contributing** | [`CONTRIBUTING.md`](https://github.com/Syncrobotic/.github/blob/main/CONTRIBUTING.md) |
-| 🔒 **Security** | [`SECURITY.md`](https://github.com/Syncrobotic/.github/blob/main/SECURITY.md) |
-| 💬 **Support** | [`SUPPORT.md`](https://github.com/Syncrobotic/.github/blob/main/SUPPORT.md) |
+| **Quadruped robots** | Gait policies trained in simulation and deployed on the dog, an on-board gateway, and the console operators drive it from. |
+| **On-premise video analytics** | Camera ingest, a rule engine and a dashboard that run inside the customer's building, with no round trip to the cloud. |
+| **Perception models** | Vision and vision-language models trained on our own data pipeline and sized to fit edge hardware. |
 
-<div align="center">
-<sub>© SyncRobotic — Intelligent Robotics & Autonomous Systems</sub>
-</div>
+## Open to read
+
+| Repository | What it is |
+| --- | --- |
+| [SyncAI-Lib-DesignSystem](https://github.com/Syncrobotic/SyncAI-Lib-DesignSystem) | The design language behind every SYNCROBOTIC interface, shipped as a shadcn/ui registry |
+| [SyncAI-Lib-HydraNet](https://github.com/Syncrobotic/SyncAI-Lib-HydraNet) | Loss prevention and retail analytics from the CCTV already on the ceiling |
+| [SyncAI-Data-RtspRecorder](https://github.com/Syncrobotic/SyncAI-Data-RtspRecorder) | Records RTSP streams and uploads them to cloud storage |
+
+Found a security problem? Please report it privately, as described in our [security policy](https://github.com/Syncrobotic/.github/blob/main/SECURITY.md).

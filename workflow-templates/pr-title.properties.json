@@ -1,0 +1,6 @@
+{
+  "name": "PR title",
+  "description": "Checks that the PR title is an English Conventional Commit, as the engineering handbook requires.",
+  "iconName": "octicon git-pull-request",
+  "categories": ["Automation"]
+}

@@ -1,97 +1,53 @@
-name: 🐛 Bug Report
-description: Report a bug or something that isn't working as expected.
-title: "[Bug] <what's broken>"
-labels: ["bug"]
+name: Bug report
+description: Something doesn't work the way it should.
+title: "[Area] what goes wrong"
+labels: ["bug", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### 🐛 Thanks for the report
-        A clear repro is the fastest path to a fix. Fill in as much as you can. 🔧
-  - type: checkboxes
-    attributes:
-      label: Pre-flight
-      options:
-        - label: I searched existing issues and this isn't a duplicate.
-          required: true
-        - label: I'm on the latest version of the affected branch/build.
-          required: true
-        - label: I agree to follow this project's Code of Conduct.
-          required: true
+        Write the title in English, e.g. `[Gateway] Camera preview stays black after a server restart`. The rest can be in any language.
+        Found a security problem? Don't file it here; follow the [security policy](https://github.com/Syncrobotic/.github/blob/main/SECURITY.md).
   - type: textarea
-    id: description
+    id: what
     attributes:
-      label: 🐞 What happened
-      description: A clear and concise description of the bug and the actual behavior.
-      placeholder: Tell us what went wrong.
+      label: What happened
+      description: What did you see? What did you expect instead?
     validations:
       required: true
   - type: textarea
-    id: expected
+    id: steps
     attributes:
-      label: 🎯 Expected behavior
-      description: What did you expect to happen instead?
-    validations:
-      required: true
-  - type: textarea
-    id: reproduction
-    attributes:
-      label: 🔁 Steps to reproduce
+      label: Steps to reproduce
       placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. Scroll to '...'
-        4. See the error
+        1. …
+        2. …
+        3. …
     validations:
       required: true
   - type: input
-    id: environment
+    id: version
     attributes:
-      label: 🖥️ Environment
-      description: Branch/commit, browser/OS, and deployment tier.
-      placeholder: "dev @ 0de27aa3, Chrome 141, macOS 14, local"
+      label: Version
+      description: Branch and commit, release tag, or robot / device build.
+      placeholder: dev @ 0de27aa, or v1.4.0 on G23-07
     validations:
       required: true
   - type: dropdown
-    id: severity
+    id: impact
     attributes:
-      label: 🌡️ Severity
+      label: Impact
+      description: Helps triage. The owner sets the priority label.
       options:
-        - S0 — outage / data loss
-        - S1 — major feature broken, no workaround
-        - S2 — feature broken, workaround exists
-        - S3 — minor / cosmetic
-    validations:
-      required: true
-  - type: dropdown
-    id: area
-    attributes:
-      label: 🗂️ Area
-      multiple: true
-      options:
-        - api
-        - auth
-        - config
-        - ci
-        - database
-        - data-layer
-        - deployment
-        - docs
-        - i18n
-        - infra
-        - security
-        - tooling
-        - ui
-        - other
+        - Outage, data loss or a safety risk
+        - Something important is broken, no workaround
+        - Broken, but there's a workaround
+        - Minor or cosmetic
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
-      label: 📎 Logs / screenshots
-      description: |
-        Relevant logs, request IDs, or screenshots. **Redact secrets.**
-        Tip: drag & drop images here.
+      label: Logs and screenshots
+      description: Remove secrets and customer data first.
       render: shell
-    validations:
-      required: false

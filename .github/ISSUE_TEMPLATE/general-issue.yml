@@ -1,37 +1,15 @@
-name: 📌 General Issue
-description: Anything that doesn't fit Task, Bug, or Feature.
-title: "[Issue] "
-labels: []
+name: Something else
+description: Doesn't fit the other templates.
+title: "[Area] "
+labels: ["needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### 📌 Something else on your mind?
-        For how-to questions, try the [Knowledge Base](https://syncrobotic.atlassian.net/wiki/home) first.
-  - type: checkboxes
-    attributes:
-      label: Pre-flight
-      options:
-        - label: I searched existing issues and this isn't a duplicate.
-          required: true
+        Product questions and how-to guides live in [Confluence](https://syncrobotic.atlassian.net/wiki/home), so it's worth a look there first.
   - type: textarea
     id: description
     attributes:
-      label: 📝 Description
-      description: Clearly describe the issue or topic.
+      label: What's on your mind
     validations:
       required: true
-  - type: textarea
-    id: context
-    attributes:
-      label: 🧭 Context
-      description: Relevant background or situation.
-    validations:
-      required: false
-  - type: textarea
-    id: additional
-    attributes:
-      label: ➕ Additional notes
-      description: Any other information, screenshots, or links.
-    validations:
-      required: false

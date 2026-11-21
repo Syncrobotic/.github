@@ -1,0 +1,29 @@
+# Checks the PR title: English Conventional Commits. See the engineering handbook.
+# Make "PR title / title" a required status check.
+name: PR title
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+permissions:
+  contents: read
+jobs:
+  title:
+    if: github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: English Conventional Commits
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          set -euo pipefail
+          types='feat|fix|perf|refactor|docs|test|build|ci|data|chore|revert'
+          if ! printf '%s' "$TITLE" | grep -Eq "^(${types})(\([a-z0-9._/-]+\))?!?: [^A-Z].{0,95}$"; then
+            echo "::error::PR title must look like 'feat(scope): add something' (type: ${types//|/, }; lower-case subject; <= 100 chars). Got: $TITLE"
+            exit 1
+          fi
+          if printf '%s' "$TITLE" | LC_ALL=C.UTF-8 grep -Pq '[\x{3040}-\x{30ff}\x{3400}-\x{4dbf}\x{4e00}-\x{9fff}\x{ac00}-\x{d7af}\x{ff00}-\x{ffef}]'; then
+            echo "::error::PR title must be in English (no CJK characters). Got: $TITLE"
+            exit 1
+          fi
+          echo "OK: $TITLE"
